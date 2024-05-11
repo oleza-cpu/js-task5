@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <Div>
+        <h1> Hello World</h1>
+    </Div>
+    <script type="text/javascript">
+    function digitSum(k) {
+    
+    if (k < 10) {
+        return k;
+    }
+    
+    return k % 10 + digitSum(Math.floor(k / 10));
+}
+
+
+console.log(digitSum(123)); 
+console.log(digitSum(9876)); 
+
+
+
+        </script>
+</body>
+</html>
