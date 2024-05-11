@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <Div>
+        <h1> Hello World</h1>
+    </Div>
+    <script type="text/javascript">
+   function format(data, type) {
+    if (type === "number") {
+        format = function(data) {
+            return Number(data);
+        };
+    } else if (type === "boolean") {
+        format = function(data) {
+            return Boolean(data);
+        };
+    } else if (type === "string") {
+        format = function(data) {
+            return String(data);
+        };
+    }
+    return format(data);
+}
+
+console.log(format("1", "number")); // 1
+console.log(format("1")); // 1
+console.log(typeof format()); // "number"
+
+console.log(format("Hello", "boolean")); // true
+console.log(format(1)); // true
+console.log(typeof format()); // "boolean"
+
+console.log(format(true, "string")); // "true"
+console.log(format(1)); // "1"
+console.log(typeof format()); // "string"
+
+
+        </script>
+</body>
+</html>
